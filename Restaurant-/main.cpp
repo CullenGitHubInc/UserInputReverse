@@ -10,9 +10,9 @@ void appendToFile(const std::string& filename, const std::string& userInput) {
         outFile << userInput << std::endl; // this part checks to see if file properly opened. If so, it then appends user input and gives user feeback
 
         outFile.close();
-        std::cout << "Data successfully appended to " << filename << std::endl;
+        std::cout << "Data correctly appended to " << filename << std::endl;
     } else {
-        std::cerr << "Error opening file for appending." << std::endl;
+        std::cerr << "Error opening file to append." << std::endl;
     }
 }
 
@@ -29,9 +29,9 @@ void reverseFileContent(const std::string& inputFilename, const std::string& out
 
         inFile.close();
         outFile.close();
-        std::cout << "Reversed content successfully written to " << outputFilename << std::endl;
+        std::cout << "Reversed content correctly written to " << outputFilename << std::endl;
     } else {
-        std::cerr << "Error opening files for reading/writing." << std::endl;
+        std::cerr << "Error opening files to read." << std::endl;
     }
 }
 
@@ -41,7 +41,7 @@ int main() {
     const std::string outputFilename = "CSC450_mod5_reverse.txt";
 
     // retrieving user input
-    std::cout << "Enter text to append to the file: ";
+    std::cout << "Enter text to append to file: ";
     std::getline(std::cin, userInput);
 
     // append input to the file
